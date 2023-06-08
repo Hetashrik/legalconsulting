@@ -64,7 +64,7 @@ function Contact() {
 
 
             {/* Mobile view */}
-            <section className="lg:hidden">
+            <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
                 <div className="bg-[#ea580c]">
                     <div>
                         <Image src={FG_LOGO_white_4} width={75} height={75} className="m-9 pt-9" />

@@ -32,7 +32,7 @@ function BigCompany() {
             </div>
 
             {/* Mobile view */}
-            <section className="lg:hidden mt-28">
+            <section className="lg:hidden mt-28 sm:w-[1263px] max-w-screen-xl">
                 <div className="bg-[#595959] py-7">
                     <p className="text-center text-white text-xl">Many big company trusted us</p>
                     <p className="text-center text-white text-sm mt-3">Our clients include multinational corporations, financial</p>

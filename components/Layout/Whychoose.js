@@ -38,10 +38,10 @@ function WhyChoose() {
                 </div>
             </div>
 
-            <section className="lg:hidden">
+            <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
 
 
-                <Image src={why_choose_mv} alt="whychoose" className="w-full"/>
+                <Image src={why_choose_mv} alt="whychoose" width={400} className=""/>
 
             <div>
             </div>

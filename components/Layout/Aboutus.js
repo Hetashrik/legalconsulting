@@ -76,7 +76,7 @@ function Aboutus() {
       </div>
 
       {/* Mobile view */}
-      <section className="lg:hidden">
+      <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
         <div className="relative bottom-24">
           <p className="text-center font-bold text-3xl">About Us</p>
           <p className="text-center font-semibold text-1xl mt-1">We have the best attorney for your</p>

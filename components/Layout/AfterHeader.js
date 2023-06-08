@@ -19,9 +19,9 @@ function AfterHeader() {
 
 
         {/* Mobile view */}
-        <section className="lg:hidden">
+        <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
             <div>
-                <Image src={AfterHeader_mv} className="w-full"/>
+                <Image src={AfterHeader_mv} width={390} height="auto" className=""/>
             </div>
             <div className="bg-[#332b27]">
                 <p className="text-white ml-4 text-5xl pt-4 ">FINTRACT</p>

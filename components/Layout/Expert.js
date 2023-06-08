@@ -334,7 +334,7 @@ function Expert() {
 
 
       {/* Mobile view */}
-      <section className="lg:hidden">
+      <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
         <div className="mt-16">
           <p className="text-center text-2xl font-semibold">What we are expert at</p>
           <p className="text-center text-xl font-semibold">Legal and Regulatory Practice Areas</p>

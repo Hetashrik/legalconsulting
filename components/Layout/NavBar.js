@@ -35,7 +35,7 @@ function NavBar() {
 
 
             {/* mobile viewBox */}
-            <section className="lg:hidden bg-black">
+            <section className="lg:hidden bg-black sm:w-[1263px] max-w-screen-xl">
 
                 <div className="flex">
 
