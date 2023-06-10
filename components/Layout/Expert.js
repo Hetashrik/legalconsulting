@@ -177,6 +177,8 @@ function Expert() {
 
   return (
     <>
+    <div className="max-w-[1240px]">
+
       <div className="hidden sm:block">
         <div>
           <p className="font-bold text-3xl relative bottom-[23rem] left-[5rem]">What we are expert at</p>
@@ -334,7 +336,7 @@ function Expert() {
 
 
       {/* Mobile view */}
-      <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
+      <section className="lg:hidden">
         <div className="mt-16">
           <p className="text-center text-2xl font-semibold">What we are expert at</p>
           <p className="text-center text-xl font-semibold">Legal and Regulatory Practice Areas</p>
@@ -391,6 +393,7 @@ function Expert() {
         </section>
       </section>
      
+</div>
     </>
   );
 }

@@ -4,6 +4,8 @@ import why_choose_mv from "../../public/images/why_choose_mv.png"
 function WhyChoose() {
     return (
         <>
+        <div className="max-w-[1240px]">
+
             <div className=" flex hidden sm:block">
                 <div>
                     <Image src={why_choose} alt="whychoose" width="100%" height="1031" />
@@ -38,14 +40,15 @@ function WhyChoose() {
                 </div>
             </div>
 
-            <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
+            <section className="lg:hidden">
 
 
-                <Image src={why_choose_mv} alt="whychoose" width={400} className=""/>
+                <Image src={why_choose_mv} alt="whychoose" className="w-screen"/>
 
             <div>
             </div>
             </section>
+</div>
         </>
     );
 }

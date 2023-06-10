@@ -15,6 +15,7 @@ import linkedin_mv from "../../public/images/linkedin_mv.png";
 function Contact() {
     return (
         <>
+            <div className="max-w-[1240px]">
 
             <div className="bg-[#ea580c] h-[590px] hidden sm:block">
                 <div className="flex space-x-14 relative top-14 left-16">
@@ -64,7 +65,7 @@ function Contact() {
 
 
             {/* Mobile view */}
-            <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
+            <section className="lg:hidden">
                 <div className="bg-[#ea580c]">
                     <div>
                         <Image src={FG_LOGO_white_4} width={75} height={75} className="m-9 pt-9" />
@@ -111,6 +112,7 @@ function Contact() {
                 </div>
             </section>
   
+</div>
         </>
 
     );

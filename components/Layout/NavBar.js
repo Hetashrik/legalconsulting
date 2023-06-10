@@ -10,6 +10,8 @@ function NavBar() {
     const [navbar, setNavbar] = useState(false);
     return (
         <>
+        <div className="max-w-[1240px]">
+
             <nav className="bg-black h-[90px] hidden sm:block">
                 <div className="flex justify-between">
                     <div className="items-center py-4 px-10 inset-2 hidden sm:block">
@@ -35,7 +37,7 @@ function NavBar() {
 
 
             {/* mobile viewBox */}
-            <section className="lg:hidden bg-black sm:w-[1263px] max-w-screen-xl">
+            <section className="lg:hidden bg-black sm:w-full">
 
                 <div className="flex">
 
@@ -69,10 +71,10 @@ function NavBar() {
                     </div>
                 </div>
                 {navbar && (
-                    <div className="absolute z-10 top-0 left-0 bg-black w-full h-full">
+                    <div className="absolute z-10 top-0 left-0 bg-black">
                         <div className="m-6">
                             <Image src={close_menu} className="relative" onClick={() => setNavbar(!navbar)} />
-                            <ul className="items-center relative">
+                            <ul className="flex flex-col items-center justify-center w-screen h-screen bg-black">
                                 <li className="text-white text-2xl text-center m-3">Home</li>
                                 <li className="text-white text-2xl text-center m-3">More</li>
                                 <li className="text-white text-2xl text-center m-3">Our Product</li>
@@ -83,6 +85,7 @@ function NavBar() {
                     </div>
                 )} 
             </section>
+        </div>
            
         </>
     );

@@ -5,7 +5,8 @@ import AfterHeader_mv from "../../public/images/AfterHeader_mv.png";
 function AfterHeader() {
     return (
         <>
-        
+        <div className="max-w-[1240px]">
+
         <div className="w-[100%] hidden sm:block"> 
             <div>
             <Image className="-z-10" src={Legal1} alt="FG_LOGO" width="1980" height="1113.75" />
@@ -19,9 +20,9 @@ function AfterHeader() {
 
 
         {/* Mobile view */}
-        <section className="lg:hidden sm:w-[1263px] max-w-screen-xl">
+        <section className="lg:hidden">
             <div>
-                <Image src={AfterHeader_mv} width={390} height="auto" className=""/>
+                <Image src={AfterHeader_mv} className="w-full" />
             </div>
             <div className="bg-[#332b27]">
                 <p className="text-white ml-4 text-5xl pt-4 ">FINTRACT</p>
@@ -33,6 +34,7 @@ function AfterHeader() {
                 <p className="text-white ml-4 pb-4">experience, embrace niche tools and technology</p>
             </div>
         </section>
+        </div>
         </>
     );
 }
