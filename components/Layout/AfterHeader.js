@@ -8,8 +8,8 @@ function AfterHeader() {
         <div className="max-w-[1240px]">
 
         <div className="w-[100%] hidden sm:block"> 
-            <div>
-            <Image className="-z-10" src={Legal1} alt="FG_LOGO" width="1980" height="1113.75" />
+            <div className="w-screen">
+            <Image className="-z-10" src={Legal1} alt="FG_LOGO" />
                 <p className="text-center text-white relative bottom-[26rem] font-medium text-7.5xl font-sans">FINTRACT GLOBAL</p>
                 <p className="text-center text-white relative bottom-96  text-6.5xl font-sans font-semibold">WE HELP FOR PROFESSIONAL SERVICES</p>
                 <p className="text-center text-white relative bottom-96  text-6.5xl font-sans font-semibold"> WITH PERSONAL ATTENTION</p>

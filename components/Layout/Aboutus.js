@@ -54,21 +54,21 @@ function Aboutus() {
           <div>
             <div className="relative">
               <p className="relative left-[6rem] -top-[13rem] text-left font-medium text-5.5xl">About Us</p>
-              <p className="relative left-[6rem] -top-[12rem] text-left font-medium text-5.5xl">We have the best attorney for your</p>
-              <p className="relative left-[6rem] -top-[12rem] text-left font-medium text-5.5xl">best support</p>
+              <p className="relative left-[6rem] -top-[12rem] text-left font-medium text-5.5xl">We have the best attorney for your best support</p>
+              {/* <p className="relative left-[6rem] -top-[12rem] text-left font-medium text-5.5xl">best support</p> */}
               <div>
-                <li className="relative left-[6rem] -top-[13rem] text-left mt-10">Driven by a passion for technological innovation and fully-fledged with a team of legal</li>
-                <p className="relative left-[6rem] -top-[13rem]"> experts, who are the master of their trades, makes. Fintract Global the right choice for your</p>
-                <p className="relative left-[6rem] -top-[13rem]"> legal consultancy needs. We offer a diversed is course that ranges from technological laws </p>
-                <p className="relative left-[6rem] -top-[13rem]">such as Open  Banking Law, Blockchain Law, Artificial Intelligence Law to Company Law, Tax</p>
-                <p className="relative left-[6rem] -top-[13rem]">Law, Bankruptcy Law, Intellectual Property, and more</p>
-                <li className="relative left-[6rem] -top-[13rem] text-left mt-10">Our team equipped with the latest technologies, which allows us to provide</li>
-                <p className="relative left-[6rem] -top-[13rem]"> services such as asset tracking, computer forensic, due diligence,ethical hacking, financial</p>
-                <p className="relative left-[6rem] -top-[13rem]"> investigation, forensic accounting, forensic valuation, policy-making and regulatory</p>
-                <p className="relative left-[6rem] -top-[13rem]"> compliance. We currently provide services to various clients in the UK and Europe.</p>
-                <li className="relative left-[6rem] -top-[13rem] text-left mt-10">At Fintract Global, we believe in ethics, honesty, loyalty and stand out</li>
-                <p className="relative left-[6rem] -top-[13rem]"> for our commitment. Our priority is our clients, and our team work hard to ensure</p>
-                <p className="relative left-[6rem] -top-[13rem]"> that we deliver excellent client service.</p>
+                <li className="relative left-[6rem] -top-[13rem] text-left mt-10 text-xl">Driven by a passion for technological innovation and fully-fledged with a team of legal</li>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> experts, who are the master of their trades, makes. Fintract Global the right choice for your</p>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> legal consultancy needs. We offer a diversed is course that ranges from technological laws </p>
+                <p className="relative left-[6rem] -top-[13rem] text-xl">such as Open  Banking Law, Blockchain Law, Artificial Intelligence Law to Company Law, Tax</p>
+                <p className="relative left-[6rem] -top-[13rem] text-xl">Law, Bankruptcy Law, Intellectual Property, and more</p>
+                <li className="relative left-[6rem] -top-[13rem] text-left mt-10 text-xl">Our team equipped with the latest technologies, which allows us to provide</li>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> services such as asset tracking, computer forensic, due diligence,ethical hacking, financial</p>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> investigation, forensic accounting, forensic valuation, policy-making and regulatory</p>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> compliance. We currently provide services to various clients in the UK and Europe.</p>
+                <li className="relative left-[6rem] -top-[13rem] text-left mt-10 text-xl">At Fintract Global, we believe in ethics, honesty, loyalty and stand out</li>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> for our commitment. Our priority is our clients, and our team work hard to ensure</p>
+                <p className="relative left-[6rem] -top-[13rem] text-xl"> that we deliver excellent client service.</p>
               </div>
             </div>
           </div>
