@@ -12,7 +12,7 @@ function NavBar() {
         <>
         <div className="max-w-[1240px]">
 
-            <nav className="bg-black h-[90px] hidden sm:block">
+            <nav className="bg-black h-[90px] w-screen hidden sm:block">
                 <div className="flex justify-between">
                     <div className="items-center py-4 px-10 inset-2 hidden sm:block">
                         <Image src={FG_LOGO_white_4} alt="FG_LOGO" width="32" height="32" className="w-[45px] h-[34.55px] ml-[18px] mt-[0px]" />
@@ -37,7 +37,7 @@ function NavBar() {
 
 
             {/* mobile viewBox */}
-            <section className="lg:hidden bg-black sm:w-full">
+            <section className="lg:hidden bg-black">
 
                 <div className="flex">
 

@@ -1,22 +1,18 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import dark_blue_circle from "../../public/images/dark_blue_circle.png";
 import Expert_1 from "../../public/images/Expert_1.png";
 import Expert_2 from "../../public/images/Expert_2.png";
 import Expert_3 from "../../public/images/Expert_3.png";
 import Expert_4 from "../../public/images/Expert_4.png";
 import Expert_5 from "../../public/images/Expert_5.png";
-import Expert_1_mv from "../../public/images/Expert_1_mv.png";
-import Expert_2_mv from "../../public/images/Expert_2_mv.png";
-import Expert_3_mv from "../../public/images/Expert_3_mv.png";
-import Expert_4_mv from "../../public/images/Expert_4_mv.png";
-import Expert_5_mv from "../../public/images/Expert_5_mv.png";
-import Expert_6_mv from "../../public/images/Expert_6_mv.png";
 import white_circle from "../../public/images/white_circle.png";
 import left_arrow from "../../public/images/left_arrow.png";
 import right_arrow from "../../public/images/right_arrow.png";
 
-const data = [
+
+const delay = 3000;
+const datas = [
   {
     id: 1,
     src: '/images/Expert_1_mv.png',
@@ -160,20 +156,39 @@ const data = [
     dot10: ''
   }
 ];
+function ExpertSlider() {
 
 
-function Expert() {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef(null);
 
-  function nextText() {
-    const newIndex = currentTextIndex === data.length - 1 ? 0 : currentTextIndex + 1;
-    setCurrentTextIndex(newIndex);
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
   };
 
-  function previousText() {
-    const newIndex = currentTextIndex === 0 ? data.length - 1 : currentTextIndex - 1;
-    setCurrentTextIndex(newIndex);
-  };
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === datas.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
+  
+
+
+
+
+
+
 
   return (
     <>
@@ -240,7 +255,7 @@ function Expert() {
             </div>
             <div className="ml-14">
               {/* col2 */}
-              <div className="w-[300px] h-[400px] m-4 -mt-64 bg-white flex rounded-md shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25)] justify-center">
+              <div className="w-[300px] h-[400px] m-4 -mt-64 bg-white flex rounded-md shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25)] justify-center translate-x-6">
                 {/* row1 */}
                 <Image className="w-[50px] h-[50px] relative -left-[0.2rem] mt-7" src={dark_blue_circle} alt="dark_blue_circle" />
                 <Image className="w-[30px] h-[30px] relative -left-[2.5rem] mt-[2.25rem]" src={Expert_2} alt="Expert_2" />
@@ -343,54 +358,60 @@ function Expert() {
         </div>
 
         {/* slider */}
-        <section>
-          <div className="bg-white rounded-3xl ring ring-black shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25)] justify-center m-14">
-            <Image src={data[currentTextIndex].src} alt="darkcurcle" width="40" height="40" className="m-7 relative top-4" />
-            <p className="text-xl font-bold ml-8">{data[currentTextIndex].title1}</p>
-            <p className="text-xl font-bold ml-8">{data[currentTextIndex].title2}</p>
-
-            <p className=" ml-5 font-bold text-4xl">{data[currentTextIndex].dot1}</p>
-            <p className=" ml-5 relative bottom-5 left-4">{data[currentTextIndex].text1}</p>
-
-            <p className=" ml-5 font-bold text-4xl relative bottom-9">{data[currentTextIndex].dot2}</p>
-            <p className=" ml-5 -mt-6 relative bottom-8 left-4">{data[currentTextIndex].text2}</p>
-
-            <p className=" ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot3}</p>
-            <p className=" ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text3}</p>
-
-            <p className=" ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot4}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text4}</p>
-
-            <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot5}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text5}</p>
-
-            <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot6}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text6}</p>
-
-            <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot7}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text7}</p>
-
-            <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot8}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text8}</p>
-
-            <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot9}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text9}</p>
-
-            <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data[currentTextIndex].dot10}</p>
-            <p className="ml-5 -mt-9 relative bottom-8 left-4">{data[currentTextIndex].text10}</p>
 
 
+        <section className="overflow-hidden">
 
-            <button className="absolute top-1/2 left-2 transform -translate-y-1/2" onClick={previousText}>
-              {/* <Image src={white_circle} alt="" width="40" height="50" className="shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25) relative top-[2200px]" /> */}
-              <Image src={left_arrow} alt="" width="30" height="30" className="relative top-[2400px]" />
-            </button>
-            <button className="absolute top-1/2 right-2 transform -translate-y-1/2" onClick={nextText}>
-              {/* <Image src={white_circle} alt="" width="40" height="50" className="shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25) relative top-[2200px]" /> */}
-              <Image src={right_arrow} alt="" width="30" height="30" className="relative top-[2400px]" />
-            </button>
-          </div>
+
+         <div className="whitespace-nowrap" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+
+         {datas.map((data, index) => (
+           <div  className="bg-white rounded-3xl ring ring-black shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25)] m-9 w-[300px] inline-block">
+
+          <div key={index}>
+            <Image src={data.src} alt="" width="40" height="40" className="m-7 relative top-4" />
+             <p className="text-xl font-bold ml-8">{data.title1}</p>
+              <p className="text-xl font-bold ml-8">{data.title2}</p>
+  
+              <p className=" ml-5 font-bold text-4xl">{data.dot1}</p>
+              <p className=" ml-5 relative bottom-5 left-4">{data.text1}</p>
+  
+              <p className=" ml-5 font-bold text-4xl relative bottom-9">{data.dot2}</p>
+              <p className=" ml-5 -mt-6 relative bottom-8 left-4">{data.text2}</p>
+  
+              <p className=" ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot3}</p>
+              <p className=" ml-5 -mt-9 relative bottom-8 left-4">{data.text3}</p>
+  
+              <p className=" ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot4}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text4}</p>
+  
+              <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot5}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text5}</p>
+  
+              <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot6}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text6}</p>
+  
+              <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot7}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text7}</p>
+  
+              <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot8}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text8}</p>
+  
+              <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot9}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text9}</p>
+  
+              <p className="ml-5 font-bold text-4xl relative bottom-[3rem]">{data.dot10}</p>
+              <p className="ml-5 -mt-9 relative bottom-8 left-4">{data.text10}</p> 
+              
+              
+            </div>
+            </div>
+              ))}
+         </div>
+
+        
         </section>
+  
       </section>
      
 </div>
@@ -398,4 +419,7 @@ function Expert() {
   );
 }
 
-export default Expert;
+export default ExpertSlider;
+
+{/* <Image src={white_circle} alt="" width="40" height="50" className="shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25) relative top-[2200px]" /> */}
+{/* <Image src={white_circle} alt="" width="40" height="50" className="shadow-[0_0px_22px_-2px_rgb(0,0,0,0.25) relative top-[2200px]" /> */}
